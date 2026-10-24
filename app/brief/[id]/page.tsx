@@ -1,12 +1,46 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { FitView } from "../../fit-view";
 import { RefusalView } from "../../refusal-view";
-import { runs } from "@/lib/store";
+import { readRun } from "@/lib/browser-runs";
+import type { RunResult } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+export default function BriefPage({ params }: { params: Promise<{ id: string }> }) {
+  const [result, setResult] = useState<RunResult | null | undefined>(undefined);
 
-export default async function BriefPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  const result = runs.get(id);
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      const { id } = await params;
+      const cached = readRun(id);
+      if (cached) {
+        if (!cancelled) setResult(cached);
+        return;
+      }
+      try {
+        const response = await fetch(`/api/runs/${id}`);
+        if (!response.ok) throw new Error("missing");
+        const run = (await response.json()) as RunResult;
+        if (!cancelled) setResult(run);
+      } catch {
+        if (!cancelled) setResult(null);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [params]);
+
+  if (result === undefined) {
+    return (
+      <main className="brief">
+        <p className="eyebrow">ProofEngine</p>
+        <h1>Opening the brief</h1>
+      </main>
+    );
+  }
+
   if (!result || !result.sendable || !result.email) {
     return (
       <main className="brief">

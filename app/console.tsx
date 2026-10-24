@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { FitView } from "./fit-view";
 import { RefusalView } from "./refusal-view";
+import { readRun, rememberRun } from "@/lib/browser-runs";
 import { DEFAULT_GUESS, SEATS, SHOWCASES } from "@/lib/refusals";
 import type { CompanyCandidate, RunResult } from "@/lib/types";
 
@@ -70,6 +71,12 @@ export default function Console() {
     setSelected(saved.candidates.find((candidate) => candidate.businessId === saved.selectedId) || null);
     if (!saved.runId) {
       setPhase("choose");
+      return;
+    }
+    const cached = readRun(saved.runId);
+    if (cached) {
+      setResult(cached);
+      setPhase("done");
       return;
     }
     let cancelled = false;
@@ -174,6 +181,7 @@ export default function Console() {
             throw new Error(data.message || "The run failed.");
           } else if (event === "done") {
             const run = data as RunResult;
+            rememberRun(run);
             setResult(run);
             setPhase("done");
             rememberSearch({ selectedId: company.businessId, runId: run.id });
