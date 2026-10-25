@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { FitView } from "../../fit-view";
 import { RefusalView } from "../../refusal-view";
-import { readRun } from "@/lib/browser-runs";
+import { readRun, rememberRun } from "@/lib/browser-runs";
+import { suggestionById } from "@/lib/suggestions";
 import type { RunResult } from "@/lib/types";
 
 export default function BriefPage({ params }: { params: Promise<{ id: string }> }) {
@@ -13,8 +14,9 @@ export default function BriefPage({ params }: { params: Promise<{ id: string }> 
     let cancelled = false;
     void (async () => {
       const { id } = await params;
-      const cached = readRun(id);
+      const cached = readRun(id) || suggestionById(id);
       if (cached) {
+        rememberRun(cached);
         if (!cancelled) setResult(cached);
         return;
       }

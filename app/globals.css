@@ -96,6 +96,32 @@ button.ghost, button.text {
 button.text { border: none; padding: 0; color: var(--green); text-decoration: underline; }
 button:disabled { opacity: 0.5; cursor: wait; }
 
+.tabs { display: flex; gap: 8px; margin-top: 8px; }
+.tab {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  cursor: pointer;
+  color: var(--muted);
+}
+.tab.on { background: var(--paper); color: var(--ink); border-color: var(--ink); }
+.desk { margin-top: 22px; }
+.desk-result { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; }
+.desk-card.on { border-color: var(--ink); }
+.desk h2 { font-family: Georgia, serif; font-size: 28px; font-weight: 500; margin: 0 0 6px; }
+.desk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.desk-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.desk-card h3 { font-size: 18px; margin: 0; }
+.desk-card blockquote { margin: 0; font-family: Georgia, serif; }
+.desk-card .primary { align-self: flex-start; }
+
 .examples { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .examples span, .meta, .stage, .small { color: var(--muted); font-size: 14px; }
 .chip {
@@ -189,7 +215,7 @@ button:disabled { opacity: 0.5; cursor: wait; }
 .fact dt { color: var(--muted); }
 
 @media (max-width: 800px) {
-  .layout { grid-template-columns: 1fr; }
+  .layout, .desk-grid { grid-template-columns: 1fr; }
   .mast { flex-direction: column; align-items: flex-start; }
   .search { flex-direction: column; }
 }

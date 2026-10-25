@@ -1,0 +1,694 @@
+[
+  {
+    "id": "ready-0112038-9",
+    "createdAt": "2026-10-25T10:40:12.214Z",
+    "company": {
+      "businessId": "0112038-9",
+      "name": "Nokia Oyj",
+      "matchNames": [
+        "Nokia Oyj",
+        "Nokia Abp",
+        "Nokia Corporation"
+      ],
+      "otherNames": [
+        "Nokia Abp",
+        "Nokia Corporation"
+      ],
+      "industry": "Pääkonttorien toiminta",
+      "industryCode": "70100",
+      "form": "Julkinen osakeyhtiö",
+      "city": "Espoo",
+      "address": "Karakaari 7, 02610, ESPOO",
+      "registrationDate": "1896-12-19",
+      "active": true,
+      "score": 100,
+      "reason": "Exact current name"
+    },
+    "sources": {
+      "jobs": "ok",
+      "searchedQueries": [
+        "Nokia Oyj",
+        "nokia"
+      ],
+      "adsNamed": 20,
+      "adsRead": 8,
+      "fromCache": false
+    },
+    "jobs": [
+      {
+        "id": "senior-ai-data-engineer-snsok-20676173",
+        "title": "Senior AI Data Engineer",
+        "companyName": "Nokia",
+        "municipality": "Bangalore",
+        "posted": "23.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/senior-ai-data-engineer-snsok-20676173",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "trainee-strategypresalesmarket-intelligence-snsok-20604056",
+        "title": "Trainee, Strategy/Presales/Market Intelligence",
+        "companyName": "Nokia",
+        "municipality": "Espoo",
+        "posted": "25.9.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/trainee-strategypresalesmarket-intelligence-snsok-20604056",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "senior-wi-fi-standardization-researcher-and-delegate-snsok-20668971",
+        "title": "Senior Wi-Fi Standardization Researcher and Delegate",
+        "companyName": "Nokia",
+        "municipality": "Finland",
+        "posted": "21.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/senior-wi-fi-standardization-researcher-and-delegate-snsok-20668971",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "privacy-data-cyber-regulatory-counsel-snsok-20548183",
+        "title": "Privacy, Data & Cyber Regulatory Counsel",
+        "companyName": "Nokia",
+        "municipality": "Espoo",
+        "posted": "16.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/privacy-data-cyber-regulatory-counsel-snsok-20548183",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "director-hw-development-snsok-20569878",
+        "title": "Director, HW Development",
+        "companyName": "Nokia",
+        "municipality": "Espoo",
+        "posted": "14.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/director-hw-development-snsok-20569878",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "lead-counsel-snsok-20626322",
+        "title": "Lead Counsel",
+        "companyName": "Nokia",
+        "municipality": "Espoo",
+        "posted": "5.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/lead-counsel-snsok-20626322",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "principal-standardization-lead-snsok-20560079",
+        "title": "Principal Standardization Lead",
+        "companyName": "Nokia",
+        "municipality": "Finland",
+        "posted": "16.9.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/principal-standardization-lead-snsok-20560079",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "senior-staff-research-specialist-snsok-20563658",
+        "title": "Senior Staff Research Specialist",
+        "companyName": "Nokia",
+        "municipality": "Espoo",
+        "posted": "10.9.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/senior-staff-research-specialist-snsok-20563658",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      }
+    ],
+    "findings": [
+      {
+        "id": "powerbi",
+        "kind": "tool",
+        "headline": "Power BI is named in the ad",
+        "reading": "The ad requires Power BI. That can mean the process lives in that tool. It can also mean the person is simply expected to know it. The ad does not say which.",
+        "service": "Internal tools, only if that spreadsheet or report is the process.",
+        "evidence": [
+          {
+            "jobId": "senior-ai-data-engineer-snsok-20676173",
+            "jobTitle": "Senior AI Data Engineer",
+            "url": "https://duunitori.fi/tyopaikat/tyo/senior-ai-data-engineer-snsok-20676173",
+            "posted": "23.10.2026",
+            "quote": "Experience with Power BI, Apache Superset or similar visualization tools.",
+            "pattern": "Power BI",
+            "viaStaffingAgency": false,
+            "advertiser": null
+          }
+        ]
+      }
+    ],
+    "sendable": true,
+    "withholdReason": null,
+    "subject": "Power BI in a job ad — Nokia Oyj",
+    "email": "Hi,\n\nNokia Oyj published an ad, “Senior AI Data Engineer” (23.10.2026). It says:\n\n\"Experience with Power BI, Apache Superset or similar visualization tools.\"\n\nThe ad asks for this skill. I am not turning that into an annual cost. The question is whether this tool still is the process.\n\nThe note has four parts: why this company, why the pattern fits Velho, what they would need, and which published piece of work is the closest example.\n\nAd: https://duunitori.fi/tyopaikat/tyo/senior-ai-data-engineer-snsok-20676173\nBrief: https://proofengine-kappa.vercel.app/brief/ready-0112038-9\n\nWorth 30 minutes to walk through that quote? No preparation on your side.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "emailLang": "en",
+    "gloss": "Hei,\n\nNokia Oyj on julkaissut ilmoituksen «Senior AI Data Engineer» (23.10.2026). Siinä lukee:\n\n«Experience with Power BI, Apache Superset or similar visualization tools.»\n\nEn päättele tästä vuosikustannusta. Kysymys on, onko tuo työkalu edelleen itse prosessi.\n\nKoosteessa on neljä kohtaa: miksi juuri tämä yritys, miksi kuvio sopii Velholle, mitä he tarvitsevat, ja mikä julkaistu työ on lähin esimerkki.\n\nIlmoitus: https://duunitori.fi/tyopaikat/tyo/senior-ai-data-engineer-snsok-20676173\nKooste: https://proofengine-kappa.vercel.app/brief/ready-0112038-9\n\nKäydäänkö havainto läpi 30 minuutissa? Valmistelua ei tarvita.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "glossLang": "fi",
+    "emailWords": 97,
+    "checks": [
+      {
+        "id": "verbatim",
+        "status": "pass",
+        "text": "Every quote is a full sentence from the ad we fetched."
+      },
+      {
+        "id": "money",
+        "status": "pass",
+        "text": "The email does not invent a cost."
+      },
+      {
+        "id": "length",
+        "status": "pass",
+        "text": "97 words. Keep the note under 120."
+      },
+      {
+        "id": "identity",
+        "status": "pass",
+        "text": "Company identity comes from the PRH trade register, not from the job board's search guess."
+      }
+    ],
+    "fit": {
+      "seat": "CFO",
+      "seatFi": "Talousjohtaja",
+      "whyCompany": "Nokia Oyj (0112038-9, Pääkonttorien toiminta, Espoo) is hiring for “Senior AI Data Engineer”, posted 23.10.2026. The ad says: “Experience with Power BI, Apache Superset or similar visualization tools.” That public sentence is the reason to talk to them now.",
+      "whyCompanyFi": "Nokia Oyj (0112038-9, Pääkonttorien toiminta, Espoo) hakee rooliin «Senior AI Data Engineer», ilmoitus 23.10.2026. Ilmoituksessa lukee: «Experience with Power BI, Apache Superset or similar visualization tools.» Julkinen lause on syy puhua heille nyt.",
+      "whyFit": "Velho fits where the numbers still live in a file a person maintains. A Power BI requirement in a finance or control role is that pattern. The ad does not prove the file is the system. It makes the question a fair one for a CFO.",
+      "whyFitFi": "Velho sopii sinne, missä luvut elävät yhä tiedostossa, jota ihminen ylläpitää. Power BI-vaatimus talouden tai ohjauksen roolissa on se kuvio. Ilmoitus ei todista, että tiedosto on järjestelmä. Se tekee kysymyksestä reilun talousjohtajalle.",
+      "need": "A current view that reads the systems they already use and shows what changed, with a person reviewing the exceptions. Not a new ERP, and not a claim that Power BI itself is waste.",
+      "needFi": "Ajantasainen näkymä, joka lukee järjestelmät joita he jo käyttävät ja näyttää mikä muuttui. Ihminen käsittelee poikkeamat. Ei uutta toiminnanohjausjärjestelmää, eikä väitettä että Power BI itsessään olisi hukkaa.",
+      "showcaseName": "Management reporting",
+      "showcaseUrl": "https://velho.io/",
+      "showcaseKind": "Published example of this kind of work",
+      "showcaseWhy": "This is the example we would show them. On velho.io, management reporting is described as figures copied from several systems each month, replaced by one current view that flags what changed. We would show it because their ad asks for Power BI. It is the same kind of work. It is not a claim that Velho has done this in their industry.",
+      "showcaseWhyFi": "Tämän esimerkin näyttäisimme heille. Velho.io kuvaa johtamisen raportoinnin näin: luvut kopioitiin joka kuukausi useasta järjestelmästä, ja tilalle tuli yksi näkymä joka näyttää mikä muuttui. Näyttäisimme sen, koska ilmoitus vaatii Power BI. Kyse on samasta työtyypistä. Emme väitä, että Velho olisi tehnyt tämän heidän toimialallaan."
+    },
+    "guess": {
+      "seat": "CEO",
+      "showcase": "Kreia"
+    },
+    "refusals": [
+      {
+        "id": "seat",
+        "overturned": true,
+        "title": "Seat",
+        "text": "You would have written to the CEO. The sentence points to the CFO. The note goes there.",
+        "textFi": "Arvaus oli toimitusjohtaja. Lause osoittaa rooliin «Talousjohtaja». Muistio menee sinne."
+      },
+      {
+        "id": "showcase",
+        "overturned": true,
+        "title": "Example",
+        "text": "You would have attached Kreia. Kreia is the outbound example: prospecting, buyer signals, and email. This sentence does not describe that work. The example we would show is Management reporting.",
+        "textFi": "Olisit liittänyt Kreian. Kreia on outbound-esimerkki: prospektointi, ostajasignaalit ja sähköposti. Tämä lause ei kuvaa sitä työtä. Esimerkki, jonka näyttäisimme, on Management reporting."
+      },
+      {
+        "id": "cost",
+        "overturned": true,
+        "title": "Cost",
+        "text": "The ad states no cost for this work. The note does not invent one.",
+        "textFi": "Ilmoitus ei kerro tämän työn kustannusta. Muistio ei keksi sitä."
+      }
+    ],
+    "redteam": null,
+    "redteamError": null
+  },
+  {
+    "id": "ready-0953707-4",
+    "createdAt": "2026-10-25T10:40:14.145Z",
+    "company": {
+      "businessId": "0953707-4",
+      "name": "Kymppivoima Oy",
+      "matchNames": [
+        "Kymppivoima Oy"
+      ],
+      "otherNames": [],
+      "industry": "Sähkön kauppa",
+      "industryCode": "35150",
+      "form": "Osakeyhtiö",
+      "city": "Helsinki",
+      "address": "Fredrikinkatu 47, 00100, HELSINKI",
+      "registrationDate": "1993-12-08",
+      "active": true,
+      "score": 100,
+      "reason": "Exact current name"
+    },
+    "sources": {
+      "jobs": "ok",
+      "searchedQueries": [
+        "Kymppivoima Oy",
+        "kymppivoima"
+      ],
+      "adsNamed": 1,
+      "adsRead": 1,
+      "fromCache": false
+    },
+    "jobs": [
+      {
+        "id": "aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734",
+        "title": "Energy & Asset Controller, Kymppivoima Oy",
+        "companyName": "Kymppivoima Oy",
+        "municipality": "Helsinki",
+        "posted": "22.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      }
+    ],
+    "findings": [
+      {
+        "id": "excel",
+        "kind": "tool",
+        "headline": "Excel is named in the ad",
+        "reading": "The ad requires Excel. That can mean the process lives in that tool. It can also mean the person is simply expected to know it. The ad does not say which.",
+        "service": "Internal tools, only if that spreadsheet or report is the process.",
+        "evidence": [
+          {
+            "jobId": "aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734",
+            "jobTitle": "Energy & Asset Controller, Kymppivoima Oy",
+            "url": "https://duunitori.fi/tyopaikat/tyo/aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734",
+            "posted": "22.10.2026",
+            "quote": "Vahvat Excel-taidot sekä kokemus Power BI:stä",
+            "pattern": "Excel",
+            "viaStaffingAgency": false,
+            "advertiser": null
+          }
+        ]
+      },
+      {
+        "id": "powerbi",
+        "kind": "tool",
+        "headline": "Power BI is named in the ad",
+        "reading": "The ad requires Power BI. That can mean the process lives in that tool. It can also mean the person is simply expected to know it. The ad does not say which.",
+        "service": "Internal tools, only if that spreadsheet or report is the process.",
+        "evidence": [
+          {
+            "jobId": "aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734",
+            "jobTitle": "Energy & Asset Controller, Kymppivoima Oy",
+            "url": "https://duunitori.fi/tyopaikat/tyo/aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734",
+            "posted": "22.10.2026",
+            "quote": "Vahvat Excel-taidot sekä kokemus Power BI:stä",
+            "pattern": "Power BI",
+            "viaStaffingAgency": false,
+            "advertiser": null
+          }
+        ]
+      }
+    ],
+    "sendable": true,
+    "withholdReason": null,
+    "subject": "Excel työpaikkailmoituksessa — Kymppivoima Oy",
+    "email": "Hei,\n\nKymppivoima Oy on julkaissut ilmoituksen «Energy & Asset Controller, Kymppivoima Oy» (22.10.2026). Siinä lukee:\n\n«Vahvat Excel-taidot sekä kokemus Power BI:stä»\n\nEn päättele tästä vuosikustannusta. Kysymys on, onko tuo työkalu edelleen itse prosessi.\n\nKoosteessa on neljä kohtaa: miksi juuri tämä yritys, miksi kuvio sopii Velholle, mitä he tarvitsevat, ja mikä julkaistu työ on lähin esimerkki.\n\nIlmoitus: https://duunitori.fi/tyopaikat/tyo/aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734\nKooste: https://proofengine-kappa.vercel.app/brief/ready-0953707-4\n\nKäydäänkö havainto läpi 30 minuutissa? Valmistelua ei tarvita.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "emailLang": "fi",
+    "gloss": "Hi,\n\nKymppivoima Oy published an ad, “Energy & Asset Controller, Kymppivoima Oy” (22.10.2026). It says:\n\n\"Vahvat Excel-taidot sekä kokemus Power BI:stä\"\n\nThe ad asks for this skill. I am not turning that into an annual cost. The question is whether this tool still is the process.\n\nThe note has four parts: why this company, why the pattern fits Velho, what they would need, and which published piece of work is the closest example.\n\nAd: https://duunitori.fi/tyopaikat/tyo/aspia-finland-energy-asset-controller-kymppivoima-oy-sdsuu-20669734\nBrief: https://proofengine-kappa.vercel.app/brief/ready-0953707-4\n\nWorth 30 minutes to walk through that quote? No preparation on your side.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "glossLang": "en",
+    "emailWords": 72,
+    "checks": [
+      {
+        "id": "verbatim",
+        "status": "pass",
+        "text": "Every quote is a full sentence from the ad we fetched."
+      },
+      {
+        "id": "money",
+        "status": "pass",
+        "text": "The email does not invent a cost."
+      },
+      {
+        "id": "length",
+        "status": "pass",
+        "text": "72 words. Keep the note under 120."
+      },
+      {
+        "id": "identity",
+        "status": "pass",
+        "text": "Company identity comes from the PRH trade register, not from the job board's search guess."
+      }
+    ],
+    "fit": {
+      "seat": "CFO",
+      "seatFi": "Talousjohtaja",
+      "whyCompany": "Kymppivoima Oy (0953707-4, Sähkön kauppa, Helsinki) is hiring for “Energy & Asset Controller, Kymppivoima Oy”, posted 22.10.2026. The ad says: “Vahvat Excel-taidot sekä kokemus Power BI:stä” That public sentence is the reason to talk to them now.",
+      "whyCompanyFi": "Kymppivoima Oy (0953707-4, Sähkön kauppa, Helsinki) hakee rooliin «Energy & Asset Controller, Kymppivoima Oy», ilmoitus 22.10.2026. Ilmoituksessa lukee: «Vahvat Excel-taidot sekä kokemus Power BI:stä» Julkinen lause on syy puhua heille nyt.",
+      "whyFit": "Velho fits where the numbers still live in a file a person maintains. An Excel requirement in a finance or control role is that pattern. The ad does not prove the file is the system. It makes the question a fair one for a CFO.",
+      "whyFitFi": "Velho sopii sinne, missä luvut elävät yhä tiedostossa, jota ihminen ylläpitää. Excel-vaatimus talouden tai ohjauksen roolissa on se kuvio. Ilmoitus ei todista, että tiedosto on järjestelmä. Se tekee kysymyksestä reilun talousjohtajalle.",
+      "need": "A current view that reads the systems they already use and shows what changed, with a person reviewing the exceptions. Not a new ERP, and not a claim that Excel itself is waste.",
+      "needFi": "Ajantasainen näkymä, joka lukee järjestelmät joita he jo käyttävät ja näyttää mikä muuttui. Ihminen käsittelee poikkeamat. Ei uutta toiminnanohjausjärjestelmää, eikä väitettä että Excel itsessään olisi hukkaa.",
+      "showcaseName": "Management reporting",
+      "showcaseUrl": "https://velho.io/",
+      "showcaseKind": "Published example of this kind of work",
+      "showcaseWhy": "This is the example we would show them. On velho.io, management reporting is described as figures copied from several systems each month, replaced by one current view that flags what changed. We would show it because their ad asks for Excel. It is the same kind of work. It is not a claim that Velho has done this in their industry.",
+      "showcaseWhyFi": "Tämän esimerkin näyttäisimme heille. Velho.io kuvaa johtamisen raportoinnin näin: luvut kopioitiin joka kuukausi useasta järjestelmästä, ja tilalle tuli yksi näkymä joka näyttää mikä muuttui. Näyttäisimme sen, koska ilmoitus vaatii Excel. Kyse on samasta työtyypistä. Emme väitä, että Velho olisi tehnyt tämän heidän toimialallaan."
+    },
+    "guess": {
+      "seat": "CEO",
+      "showcase": "Kreia"
+    },
+    "refusals": [
+      {
+        "id": "seat",
+        "overturned": true,
+        "title": "Seat",
+        "text": "You would have written to the CEO. The sentence points to the CFO. The note goes there.",
+        "textFi": "Arvaus oli toimitusjohtaja. Lause osoittaa rooliin «Talousjohtaja». Muistio menee sinne."
+      },
+      {
+        "id": "showcase",
+        "overturned": true,
+        "title": "Example",
+        "text": "You would have attached Kreia. Kreia is the outbound example: prospecting, buyer signals, and email. This sentence does not describe that work. The example we would show is Management reporting.",
+        "textFi": "Olisit liittänyt Kreian. Kreia on outbound-esimerkki: prospektointi, ostajasignaalit ja sähköposti. Tämä lause ei kuvaa sitä työtä. Esimerkki, jonka näyttäisimme, on Management reporting."
+      },
+      {
+        "id": "cost",
+        "overturned": true,
+        "title": "Cost",
+        "text": "The ad states no cost for this work. The note does not invent one.",
+        "textFi": "Ilmoitus ei kerro tämän työn kustannusta. Muistio ei keksi sitä."
+      }
+    ],
+    "redteam": null,
+    "redteamError": null
+  },
+  {
+    "id": "ready-2944805-2",
+    "createdAt": "2026-10-25T10:40:16.307Z",
+    "company": {
+      "businessId": "2944805-2",
+      "name": "Oy Verman Ab",
+      "matchNames": [
+        "Oy Verman Ab"
+      ],
+      "otherNames": [],
+      "industry": "Lääkkeiden tukkukauppa",
+      "industryCode": "46461",
+      "form": "Osakeyhtiö",
+      "city": "Vantaa",
+      "address": "Äyritie 8, 01510, VANTAA",
+      "registrationDate": "2018-11-09",
+      "active": true,
+      "score": 100,
+      "reason": "Exact current name"
+    },
+    "sources": {
+      "jobs": "ok",
+      "searchedQueries": [
+        "Oy Verman Ab",
+        "oy verman"
+      ],
+      "adsNamed": 1,
+      "adsRead": 1,
+      "fromCache": false
+    },
+    "jobs": [
+      {
+        "id": "oy-verman-ab-senior-business-controller-sdsuu-20669330",
+        "title": "Senior Business Controller",
+        "companyName": "Oy Verman Ab",
+        "municipality": "Vantaa",
+        "posted": "22.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/oy-verman-ab-senior-business-controller-sdsuu-20669330",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      }
+    ],
+    "findings": [
+      {
+        "id": "powerbi",
+        "kind": "tool",
+        "headline": "Power BI is named in the ad",
+        "reading": "The ad requires Power BI. That can mean the process lives in that tool. It can also mean the person is simply expected to know it. The ad does not say which.",
+        "service": "Internal tools, only if that spreadsheet or report is the process.",
+        "evidence": [
+          {
+            "jobId": "oy-verman-ab-senior-business-controller-sdsuu-20669330",
+            "jobTitle": "Senior Business Controller",
+            "url": "https://duunitori.fi/tyopaikat/tyo/oy-verman-ab-senior-business-controller-sdsuu-20669330",
+            "posted": "22.10.2026",
+            "quote": "Erilaiset taloushallinnon, raportoinnin ja analytiikan työkalut ovat sinulle tuttuja, hallitset Excelin erinomaisesti ja Power BI on sinulle tuttu työkalu.",
+            "pattern": "Power BI",
+            "viaStaffingAgency": false,
+            "advertiser": null
+          }
+        ]
+      }
+    ],
+    "sendable": true,
+    "withholdReason": null,
+    "subject": "Power BI työpaikkailmoituksessa — Oy Verman Ab",
+    "email": "Hei,\n\nOy Verman Ab on julkaissut ilmoituksen «Senior Business Controller» (22.10.2026). Siinä lukee:\n\n«Erilaiset taloushallinnon, raportoinnin ja analytiikan työkalut ovat sinulle tuttuja, hallitset Excelin erinomaisesti ja Power BI on sinulle tuttu työkalu.»\n\nEn päättele tästä vuosikustannusta. Kysymys on, onko tuo työkalu edelleen itse prosessi.\n\nKoosteessa on neljä kohtaa: miksi juuri tämä yritys, miksi kuvio sopii Velholle, mitä he tarvitsevat, ja mikä julkaistu työ on lähin esimerkki.\n\nIlmoitus: https://duunitori.fi/tyopaikat/tyo/oy-verman-ab-senior-business-controller-sdsuu-20669330\nKooste: https://proofengine-kappa.vercel.app/brief/ready-2944805-2\n\nKäydäänkö havainto läpi 30 minuutissa? Valmistelua ei tarvita.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "emailLang": "fi",
+    "gloss": "Hi,\n\nOy Verman Ab published an ad, “Senior Business Controller” (22.10.2026). It says:\n\n\"Erilaiset taloushallinnon, raportoinnin ja analytiikan työkalut ovat sinulle tuttuja, hallitset Excelin erinomaisesti ja Power BI on sinulle tuttu työkalu.\"\n\nThe ad asks for this skill. I am not turning that into an annual cost. The question is whether this tool still is the process.\n\nThe note has four parts: why this company, why the pattern fits Velho, what they would need, and which published piece of work is the closest example.\n\nAd: https://duunitori.fi/tyopaikat/tyo/oy-verman-ab-senior-business-controller-sdsuu-20669330\nBrief: https://proofengine-kappa.vercel.app/brief/ready-2944805-2\n\nWorth 30 minutes to walk through that quote? No preparation on your side.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "glossLang": "en",
+    "emailWords": 83,
+    "checks": [
+      {
+        "id": "verbatim",
+        "status": "pass",
+        "text": "Every quote is a full sentence from the ad we fetched."
+      },
+      {
+        "id": "money",
+        "status": "pass",
+        "text": "The email does not invent a cost."
+      },
+      {
+        "id": "length",
+        "status": "pass",
+        "text": "83 words. Keep the note under 120."
+      },
+      {
+        "id": "identity",
+        "status": "pass",
+        "text": "Company identity comes from the PRH trade register, not from the job board's search guess."
+      }
+    ],
+    "fit": {
+      "seat": "CFO",
+      "seatFi": "Talousjohtaja",
+      "whyCompany": "Oy Verman Ab (2944805-2, Lääkkeiden tukkukauppa, Vantaa) is hiring for “Senior Business Controller”, posted 22.10.2026. The ad says: “Erilaiset taloushallinnon, raportoinnin ja analytiikan työkalut ovat sinulle tuttuja, hallitset Excelin erinomaisesti ja Power BI on sinulle tuttu työkalu.” That public sentence is the reason to talk to them now.",
+      "whyCompanyFi": "Oy Verman Ab (2944805-2, Lääkkeiden tukkukauppa, Vantaa) hakee rooliin «Senior Business Controller», ilmoitus 22.10.2026. Ilmoituksessa lukee: «Erilaiset taloushallinnon, raportoinnin ja analytiikan työkalut ovat sinulle tuttuja, hallitset Excelin erinomaisesti ja Power BI on sinulle tuttu työkalu.» Julkinen lause on syy puhua heille nyt.",
+      "whyFit": "Velho fits where the numbers still live in a file a person maintains. A Power BI requirement in a finance or control role is that pattern. The ad does not prove the file is the system. It makes the question a fair one for a CFO.",
+      "whyFitFi": "Velho sopii sinne, missä luvut elävät yhä tiedostossa, jota ihminen ylläpitää. Power BI-vaatimus talouden tai ohjauksen roolissa on se kuvio. Ilmoitus ei todista, että tiedosto on järjestelmä. Se tekee kysymyksestä reilun talousjohtajalle.",
+      "need": "A current view that reads the systems they already use and shows what changed, with a person reviewing the exceptions. Not a new ERP, and not a claim that Power BI itself is waste.",
+      "needFi": "Ajantasainen näkymä, joka lukee järjestelmät joita he jo käyttävät ja näyttää mikä muuttui. Ihminen käsittelee poikkeamat. Ei uutta toiminnanohjausjärjestelmää, eikä väitettä että Power BI itsessään olisi hukkaa.",
+      "showcaseName": "Management reporting",
+      "showcaseUrl": "https://velho.io/",
+      "showcaseKind": "Published example of this kind of work",
+      "showcaseWhy": "This is the example we would show them. On velho.io, management reporting is described as figures copied from several systems each month, replaced by one current view that flags what changed. We would show it because their ad asks for Power BI. It is the same kind of work. It is not a claim that Velho has done this in their industry.",
+      "showcaseWhyFi": "Tämän esimerkin näyttäisimme heille. Velho.io kuvaa johtamisen raportoinnin näin: luvut kopioitiin joka kuukausi useasta järjestelmästä, ja tilalle tuli yksi näkymä joka näyttää mikä muuttui. Näyttäisimme sen, koska ilmoitus vaatii Power BI. Kyse on samasta työtyypistä. Emme väitä, että Velho olisi tehnyt tämän heidän toimialallaan."
+    },
+    "guess": {
+      "seat": "CEO",
+      "showcase": "Kreia"
+    },
+    "refusals": [
+      {
+        "id": "seat",
+        "overturned": true,
+        "title": "Seat",
+        "text": "You would have written to the CEO. The sentence points to the CFO. The note goes there.",
+        "textFi": "Arvaus oli toimitusjohtaja. Lause osoittaa rooliin «Talousjohtaja». Muistio menee sinne."
+      },
+      {
+        "id": "showcase",
+        "overturned": true,
+        "title": "Example",
+        "text": "You would have attached Kreia. Kreia is the outbound example: prospecting, buyer signals, and email. This sentence does not describe that work. The example we would show is Management reporting.",
+        "textFi": "Olisit liittänyt Kreian. Kreia on outbound-esimerkki: prospektointi, ostajasignaalit ja sähköposti. Tämä lause ei kuvaa sitä työtä. Esimerkki, jonka näyttäisimme, on Management reporting."
+      },
+      {
+        "id": "cost",
+        "overturned": true,
+        "title": "Cost",
+        "text": "The ad states no cost for this work. The note does not invent one.",
+        "textFi": "Ilmoitus ei kerro tämän työn kustannusta. Muistio ei keksi sitä."
+      }
+    ],
+    "redteam": null,
+    "redteamError": null
+  },
+  {
+    "id": "ready-0184451-2",
+    "createdAt": "2026-10-25T10:40:18.844Z",
+    "company": {
+      "businessId": "0184451-2",
+      "name": "Kaskea Group Oy",
+      "matchNames": [
+        "Kaskea Group Oy"
+      ],
+      "otherNames": [],
+      "industry": "Muualla luokittelematon muiden metallituotteiden valmistus",
+      "industryCode": "25990",
+      "form": "Osakeyhtiö",
+      "city": "Ylihärmä",
+      "address": "Opastie 10, 62375, YLIHÄRMÄ",
+      "registrationDate": "1954-12-03",
+      "active": true,
+      "score": 100,
+      "reason": "Exact current name"
+    },
+    "sources": {
+      "jobs": "ok",
+      "searchedQueries": [
+        "Kaskea Group Oy",
+        "kaskea group"
+      ],
+      "adsNamed": 2,
+      "adsRead": 2,
+      "fromCache": false
+    },
+    "jobs": [
+      {
+        "id": "jarjestelmien-kehityspaallikko-stsyo-20675115",
+        "title": "Järjestelmien kehityspäällikkö",
+        "companyName": "Kaskea Group Oy",
+        "municipality": "Kauhava",
+        "posted": "22.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/jarjestelmien-kehityspaallikko-stsyo-20675115",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      },
+      {
+        "id": "tekninen-tarjouslaskija-konepajateollisuus-sasta-20646880",
+        "title": "Tarjouslaskentainsinööri (konepajateollisuus)",
+        "companyName": "Kaskea Group / aTalent",
+        "municipality": "Kauhava",
+        "posted": "14.10.2026",
+        "url": "https://duunitori.fi/tyopaikat/tyo/tekninen-tarjouslaskija-konepajateollisuus-sasta-20646880",
+        "description": "",
+        "descriptionComplete": true,
+        "salaryLabel": null,
+        "viaStaffingAgency": false,
+        "advertiser": null
+      }
+    ],
+    "findings": [
+      {
+        "id": "excel",
+        "kind": "tool",
+        "headline": "Excel is named in the ad",
+        "reading": "The ad requires Excel. That can mean the process lives in that tool. It can also mean the person is simply expected to know it. The ad does not say which.",
+        "service": "Internal tools, only if that spreadsheet or report is the process.",
+        "evidence": [
+          {
+            "jobId": "tekninen-tarjouslaskija-konepajateollisuus-sasta-20646880",
+            "jobTitle": "Tarjouslaskentainsinööri (konepajateollisuus)",
+            "url": "https://duunitori.fi/tyopaikat/tyo/tekninen-tarjouslaskija-konepajateollisuus-sasta-20646880",
+            "posted": "14.10.2026",
+            "quote": "Hyviä tietoteknisiä valmiuksia, erityisesti Excel- ja ERP-järjestelmäosaamista",
+            "pattern": "Excel",
+            "viaStaffingAgency": false,
+            "advertiser": null
+          }
+        ]
+      }
+    ],
+    "sendable": true,
+    "withholdReason": null,
+    "subject": "Excel työpaikkailmoituksessa — Kaskea Group Oy",
+    "email": "Hei,\n\nKaskea Group Oy on julkaissut ilmoituksen «Tarjouslaskentainsinööri (konepajateollisuus)» (14.10.2026). Siinä lukee:\n\n«Hyviä tietoteknisiä valmiuksia, erityisesti Excel- ja ERP-järjestelmäosaamista»\n\nEn päättele tästä vuosikustannusta. Kysymys on, onko tuo työkalu edelleen itse prosessi.\n\nKoosteessa on neljä kohtaa: miksi juuri tämä yritys, miksi kuvio sopii Velholle, mitä he tarvitsevat, ja mikä julkaistu työ on lähin esimerkki.\n\nIlmoitus: https://duunitori.fi/tyopaikat/tyo/tekninen-tarjouslaskija-konepajateollisuus-sasta-20646880\nKooste: https://proofengine-kappa.vercel.app/brief/ready-0184451-2\n\nKäydäänkö havainto läpi 30 minuutissa? Valmistelua ei tarvita.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "emailLang": "fi",
+    "gloss": "Hi,\n\nKaskea Group Oy published an ad, “Tarjouslaskentainsinööri (konepajateollisuus)” (14.10.2026). It says:\n\n\"Hyviä tietoteknisiä valmiuksia, erityisesti Excel- ja ERP-järjestelmäosaamista\"\n\nThe ad asks for this skill. I am not turning that into an annual cost. The question is whether this tool still is the process.\n\nThe note has four parts: why this company, why the pattern fits Velho, what they would need, and which published piece of work is the closest example.\n\nAd: https://duunitori.fi/tyopaikat/tyo/tekninen-tarjouslaskija-konepajateollisuus-sasta-20646880\nBrief: https://proofengine-kappa.vercel.app/brief/ready-0184451-2\n\nWorth 30 minutes to walk through that quote? No preparation on your side.\n\nOskar Kallio\nVelho Applied Intelligence",
+    "glossLang": "en",
+    "emailWords": 70,
+    "checks": [
+      {
+        "id": "verbatim",
+        "status": "pass",
+        "text": "Every quote is a full sentence from the ad we fetched."
+      },
+      {
+        "id": "money",
+        "status": "pass",
+        "text": "The email does not invent a cost."
+      },
+      {
+        "id": "length",
+        "status": "pass",
+        "text": "70 words. Keep the note under 120."
+      },
+      {
+        "id": "identity",
+        "status": "pass",
+        "text": "Company identity comes from the PRH trade register, not from the job board's search guess."
+      }
+    ],
+    "fit": {
+      "seat": "CFO",
+      "seatFi": "Talousjohtaja",
+      "whyCompany": "Kaskea Group Oy (0184451-2, Muualla luokittelematon muiden metallituotteiden valmistus, Ylihärmä) is hiring for “Tarjouslaskentainsinööri (konepajateollisuus)”, posted 14.10.2026. The ad says: “Hyviä tietoteknisiä valmiuksia, erityisesti Excel- ja ERP-järjestelmäosaamista” That public sentence is the reason to talk to them now.",
+      "whyCompanyFi": "Kaskea Group Oy (0184451-2, Muualla luokittelematon muiden metallituotteiden valmistus, Ylihärmä) hakee rooliin «Tarjouslaskentainsinööri (konepajateollisuus)», ilmoitus 14.10.2026. Ilmoituksessa lukee: «Hyviä tietoteknisiä valmiuksia, erityisesti Excel- ja ERP-järjestelmäosaamista» Julkinen lause on syy puhua heille nyt.",
+      "whyFit": "Velho fits where the numbers still live in a file a person maintains. An Excel requirement in a finance or control role is that pattern. The ad does not prove the file is the system. It makes the question a fair one for a CFO.",
+      "whyFitFi": "Velho sopii sinne, missä luvut elävät yhä tiedostossa, jota ihminen ylläpitää. Excel-vaatimus talouden tai ohjauksen roolissa on se kuvio. Ilmoitus ei todista, että tiedosto on järjestelmä. Se tekee kysymyksestä reilun talousjohtajalle.",
+      "need": "A current view that reads the systems they already use and shows what changed, with a person reviewing the exceptions. Not a new ERP, and not a claim that Excel itself is waste.",
+      "needFi": "Ajantasainen näkymä, joka lukee järjestelmät joita he jo käyttävät ja näyttää mikä muuttui. Ihminen käsittelee poikkeamat. Ei uutta toiminnanohjausjärjestelmää, eikä väitettä että Excel itsessään olisi hukkaa.",
+      "showcaseName": "Management reporting",
+      "showcaseUrl": "https://velho.io/",
+      "showcaseKind": "Published example of this kind of work",
+      "showcaseWhy": "This is the example we would show them. On velho.io, management reporting is described as figures copied from several systems each month, replaced by one current view that flags what changed. We would show it because their ad asks for Excel. It is the same kind of work. It is not a claim that Velho has done this in their industry.",
+      "showcaseWhyFi": "Tämän esimerkin näyttäisimme heille. Velho.io kuvaa johtamisen raportoinnin näin: luvut kopioitiin joka kuukausi useasta järjestelmästä, ja tilalle tuli yksi näkymä joka näyttää mikä muuttui. Näyttäisimme sen, koska ilmoitus vaatii Excel. Kyse on samasta työtyypistä. Emme väitä, että Velho olisi tehnyt tämän heidän toimialallaan."
+    },
+    "guess": {
+      "seat": "CEO",
+      "showcase": "Kreia"
+    },
+    "refusals": [
+      {
+        "id": "seat",
+        "overturned": true,
+        "title": "Seat",
+        "text": "You would have written to the CEO. The sentence points to the CFO. The note goes there.",
+        "textFi": "Arvaus oli toimitusjohtaja. Lause osoittaa rooliin «Talousjohtaja». Muistio menee sinne."
+      },
+      {
+        "id": "showcase",
+        "overturned": true,
+        "title": "Example",
+        "text": "You would have attached Kreia. Kreia is the outbound example: prospecting, buyer signals, and email. This sentence does not describe that work. The example we would show is Management reporting.",
+        "textFi": "Olisit liittänyt Kreian. Kreia on outbound-esimerkki: prospektointi, ostajasignaalit ja sähköposti. Tämä lause ei kuvaa sitä työtä. Esimerkki, jonka näyttäisimme, on Management reporting."
+      },
+      {
+        "id": "cost",
+        "overturned": true,
+        "title": "Cost",
+        "text": "The ad states no cost for this work. The note does not invent one.",
+        "textFi": "Ilmoitus ei kerro tämän työn kustannusta. Muistio ei keksi sitä."
+      }
+    ],
+    "redteam": null,
+    "redteamError": null
+  }
+]

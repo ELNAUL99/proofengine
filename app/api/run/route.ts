@@ -1,7 +1,7 @@
 import { audit, buildFindings, composeEmail, emailWordCount } from "@/lib/analyze";
 import { buildFit } from "@/lib/fit";
 import { buildRefusals, normalizeGuess } from "@/lib/refusals";
-import { redTeam } from "@/lib/claude";
+import { redTeam } from "@/lib/mistral";
 import { collectJobs } from "@/lib/jobs";
 import { getCompany } from "@/lib/prh";
 import { saveRun } from "@/lib/store";
@@ -13,7 +13,6 @@ export const runtime = "nodejs";
 export async function POST(request: Request) {
   const body = (await request.json()) as {
     businessId?: string;
-    anthropicKey?: string;
     guess?: { seat?: string; showcase?: string };
   };
   const businessId = body.businessId?.trim() || "";
@@ -88,13 +87,12 @@ export async function POST(request: Request) {
           return;
         }
 
-        const apiKey = body.anthropicKey?.trim() || process.env.ANTHROPIC_API_KEY || "";
-        if (apiKey && result.email) {
+        if (process.env.MISTRAL_API_KEY && result.email) {
           send("stage", { id: "redteam" });
           try {
-            result.redteam = await redTeam(result, apiKey);
+            result.redteam = await redTeam(result);
           } catch (error) {
-            result.redteamError = error instanceof Error ? error.message : "Red-team failed.";
+            result.redteamError = error instanceof Error ? error.message : "Red-team failed. The draft still stands.";
           }
         }
 

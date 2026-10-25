@@ -1,4 +1,4 @@
-import type { RunResult } from "./types";
+import type { RedTeam, RunResult } from "./types";
 
 const MODEL = process.env.MISTRAL_MODEL || "ministral-8b-2512";
 
@@ -58,6 +58,70 @@ function offGrade(answer: string, evidence: string): string | null {
     return "The answer invented an email address. Discarded. The grade still stands.";
   }
   return null;
+}
+
+export async function redTeam(result: Pick<RunResult, "company" | "email" | "findings">): Promise<RedTeam> {
+  const apiKey = process.env.MISTRAL_API_KEY || "";
+  if (!apiKey) throw new Error("Red-team is skipped. The draft still stands.");
+  if (!result.email) throw new Error("There is no email to pressure-test.");
+  const packet = {
+    company: result.company.name,
+    businessId: result.company.businessId,
+    email: result.email,
+    quotes: result.findings.flatMap((finding) =>
+      finding.evidence.map((item) => ({ quote: item.quote, ad: item.jobTitle, url: item.url })),
+    ),
+  };
+  const response = await fetch("https://api.mistral.ai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${apiKey}`,
+    },
+    signal: AbortSignal.timeout(20000),
+    body: JSON.stringify({
+      model: MODEL,
+      temperature: 0.2,
+      max_tokens: 700,
+      messages: [
+        {
+          role: "user",
+          content: `You are red-teaming a sales email before anyone sends it. You are not predicting a reply rate. Do not output a probability, a score, or a percentage.
+
+Facts you may use are only in this JSON. If the email claims something the quotes do not support, that is an objection.
+
+${JSON.stringify(packet)}
+
+Return JSON only:
+{"objections":["..."],"killLine":"the single sentence most likely to get the email deleted"}`,
+        },
+      ],
+    }),
+  });
+  const payload = (await response.json()) as {
+    message?: string;
+    detail?: string;
+    choices?: { message?: { content?: string | { type?: string; text?: string }[] } }[];
+  };
+  if (!response.ok) {
+    throw new Error(payload.message || payload.detail || `Mistral returned ${response.status}. The draft still stands.`);
+  }
+  const content = payload.choices?.[0]?.message?.content;
+  const text = (typeof content === "string" ? content : content?.map((block) => block.text || "").join("\n") || "").trim();
+  if (/\d\s?%|reply probability|likelihood/i.test(text)) {
+    throw new Error("The red-team answered with a probability. Discarded. The draft still stands.");
+  }
+  const jsonStart = text.indexOf("{");
+  const jsonEnd = text.lastIndexOf("}");
+  if (jsonStart < 0 || jsonEnd < jsonStart) throw new Error("Red-team did not return JSON. The draft still stands.");
+  const parsed = JSON.parse(text.slice(jsonStart, jsonEnd + 1)) as {
+    objections?: unknown;
+    killLine?: unknown;
+  };
+  const objections = Array.isArray(parsed.objections) ? parsed.objections.filter((item) => typeof item === "string") : [];
+  const killLine = typeof parsed.killLine === "string" ? parsed.killLine : "";
+  if (objections.length === 0 || !killLine) throw new Error("Red-team response was empty. The draft still stands.");
+  return { objections: objections.slice(0, 4), killLine, model: MODEL };
 }
 
 export async function askGrade(question: string, evidence: GradeEvidence, apiKey: string): Promise<{ answer: string; model: string }> {

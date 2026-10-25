@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { FitView } from "./fit-view";
 import { RefusalView } from "./refusal-view";
 import { readRun, rememberRun } from "@/lib/browser-runs";
 import { DEFAULT_GUESS, SEATS, SHOWCASES } from "@/lib/refusals";
+import { suggestions } from "@/lib/suggestions";
 import type { CompanyCandidate, RunResult } from "@/lib/types";
 
 const EXAMPLES = ["Broman Group"];
@@ -38,7 +39,7 @@ const STAGES: Record<string, string> = {
   registry: "Resolving the company in the trade register.",
   jobs: "Searching Duunitori for ads that name this company.",
   read: "Reading the full ad text.",
-  redteam: "Asking Claude what would get the email deleted.",
+  redteam: "Reading the draft for the line that would get it deleted.",
 };
 
 type ResolveResponse = {
@@ -58,14 +59,17 @@ export default function Console() {
   const [result, setResult] = useState<RunResult | null>(null);
   const [seatGuess, setSeatGuess] = useState(DEFAULT_GUESS.seat);
   const [showcaseGuess, setShowcaseGuess] = useState(DEFAULT_GUESS.showcase);
-  const [apiKey, setApiKey] = useState("");
-  const [mistralKey, setMistralKey] = useState("");
   const [showGloss, setShowGloss] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [tab, setTab] = useState<"search" | "suggest">("suggest");
+  const [resultHome, setResultHome] = useState<"search" | "suggest">("search");
+  const deskResultRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const saved = readSearch();
     if (!saved || saved.candidates.length === 0) return;
+    setTab("search");
+    setResultHome("search");
     setQuery(saved.query);
     setCandidates(saved.candidates);
     setSelected(saved.candidates.find((candidate) => candidate.businessId === saved.selectedId) || null);
@@ -98,6 +102,11 @@ export default function Console() {
     };
   }, []);
 
+  useEffect(() => {
+    if (tab !== "suggest" || resultHome !== "suggest" || !result) return;
+    deskResultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [tab, resultHome, result]);
+
   const others = useMemo(
     () => (result ? result.jobs.filter((job) => !result.findings.some((finding) => finding.evidence.some((item) => item.jobId === job.id))) : []),
     [result],
@@ -106,6 +115,8 @@ export default function Console() {
   async function lookup(nextQuery = query) {
     const cleaned = nextQuery.trim();
     if (cleaned.length < 2) return;
+    setTab("search");
+    setResultHome("search");
     setQuery(cleaned);
     setPhase("resolving");
     setError("");
@@ -144,6 +155,8 @@ export default function Console() {
   }
 
   async function run(company: CompanyCandidate) {
+    setTab("search");
+    setResultHome("search");
     setSelected(company);
     setPhase("running");
     setStage(STAGES.registry);
@@ -155,7 +168,6 @@ export default function Console() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           businessId: company.businessId,
-          anthropicKey: apiKey,
           guess: { seat: seatGuess, showcase: showcaseGuess },
         }),
       });
@@ -200,6 +212,26 @@ export default function Console() {
     setCopied(true);
   }
 
+  function openReady(run: RunResult) {
+    setTab("suggest");
+    setResultHome("suggest");
+    rememberRun(run);
+    setQuery(run.company.name);
+    setCandidates([run.company]);
+    setSelected(run.company);
+    setResult(run);
+    setError("");
+    setPhase("done");
+    setSeatGuess(run.guess?.seat || DEFAULT_GUESS.seat);
+    setShowcaseGuess(run.guess?.showcase || DEFAULT_GUESS.showcase);
+    rememberSearch({
+      query: run.company.name,
+      candidates: [run.company],
+      selectedId: run.company.businessId,
+      runId: run.id,
+    });
+  }
+
   return (
     <main className="shell">
       <header className="mast">
@@ -211,6 +243,17 @@ export default function Console() {
         <p className="small">PRH trade register and Duunitori public ads. No contact details. No estimated saving.</p>
       </header>
 
+      <div className="tabs" role="tablist">
+        <button className={tab === "search" ? "tab on" : "tab"} type="button" role="tab" aria-selected={tab === "search"} onClick={() => setTab("search")}>
+          Search
+        </button>
+        <button className={tab === "suggest" ? "tab on" : "tab"} type="button" role="tab" aria-selected={tab === "suggest"} onClick={() => setTab("suggest")}>
+          Suggesting
+        </button>
+      </div>
+
+      {tab === "search" ? (
+        <>
       <form
         className="search"
         onSubmit={(event) => {
@@ -278,41 +321,17 @@ export default function Console() {
               </button>
             ))}
           </section>
-          <section className="panel key">
-            <h2>Red-team</h2>
-            <p className="meta">Optional. Claude names objections. It does not score a reply probability. Leave this empty and the draft still stands.</p>
-            <input
-              type="password"
-              aria-label="Anthropic API key"
-              placeholder="Anthropic API key"
-              value={apiKey}
-              onChange={(event) => setApiKey(event.target.value)}
-              autoComplete="off"
-            />
-          </section>
-          <section className="panel key">
-            <h2>Follow-up</h2>
-            <p className="meta">Optional. Mistral answers one question about the grade, using only that run. Leave this empty and the grade still stands.</p>
-            <input
-              type="password"
-              aria-label="Mistral API key"
-              placeholder="Mistral API key"
-              value={mistralKey}
-              onChange={(event) => setMistralKey(event.target.value)}
-              autoComplete="off"
-            />
-          </section>
         </aside>
 
         <section>
-          {phase === "running" ? <p className="stage">{stage}</p> : null}
-          {result ? (
+          {phase === "running" && resultHome === "search" ? <p className="stage">{stage}</p> : null}
+          {result && resultHome === "search" ? (
             <>
               <ResultView result={result} others={others} showGloss={showGloss} copied={copied} onToggleGloss={() => setShowGloss((value) => !value)} onCopy={() => void copyEmail()} />
-              <AskGrade result={result} mistralKey={mistralKey} />
+              <AskGrade result={result} />
             </>
           ) : null}
-          {phase === "idle" && !result ? (
+          {!(result && resultHome === "search") && phase !== "running" && phase !== "choose" && phase !== "resolving" ? (
             <section className="panel">
               <h2>What a run will do</h2>
               <p>Resolve one legal entity. Read ads that name that entity. Quote a sentence about manual work, Excel, Power BI, or spreadsheets. Write the email from that sentence.</p>
@@ -321,11 +340,42 @@ export default function Console() {
           ) : null}
         </section>
       </div>
+        </>
+      ) : (
+        <section className="desk">
+          <h2>Contact these now</h2>
+          <p className="meta">The research already ran. Each company has a sentence from its own job ad. A person still sends the note.</p>
+          {result && resultHome === "suggest" ? (
+            <div className="desk-result" ref={deskResultRef}>
+              <ResultView result={result} others={others} showGloss={showGloss} copied={copied} onToggleGloss={() => setShowGloss((value) => !value)} onCopy={() => void copyEmail()} />
+              <AskGrade result={result} />
+            </div>
+          ) : null}
+          <div className="desk-grid">
+            {suggestions.map((run) => {
+              const quote = run.findings.flatMap((finding) => finding.evidence).find((item) => item.quote)?.quote;
+              return (
+                <article key={run.id} className={resultHome === "suggest" && result?.id === run.id ? "desk-card on" : "desk-card"}>
+                  <h3>{run.company.name}</h3>
+                  <p className="meta">
+                    {run.company.city || "City unknown"} · <span className="id">{run.company.businessId}</span>
+                  </p>
+                  <p>{run.fit?.seat}</p>
+                  {quote ? <blockquote lang={run.emailLang || "fi"}>«{quote}»</blockquote> : null}
+                  <button className="primary" type="button" onClick={() => openReady(run)}>
+                    {resultHome === "suggest" && result?.id === run.id ? "Research open" : "Open this research"}
+                  </button>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      )}
     </main>
   );
 }
 
-function AskGrade({ result, mistralKey }: { result: RunResult; mistralKey: string }) {
+function AskGrade({ result }: { result: RunResult }) {
   const [question, setQuestion] = useState("Why is this the grade, and what should Velho do next?");
   const [answer, setAnswer] = useState("");
   const [model, setModel] = useState("");
@@ -341,7 +391,7 @@ function AskGrade({ result, mistralKey }: { result: RunResult; mistralKey: strin
       const response = await fetch("/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, mistralKey, result }),
+        body: JSON.stringify({ question, result }),
       });
       const payload = (await response.json()) as { answer?: string; model?: string; error?: string };
       if (!response.ok || !payload.answer) throw new Error(payload.error || "The follow-up failed.");
